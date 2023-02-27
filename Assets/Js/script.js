@@ -1,8 +1,7 @@
 var questionCounter = 0
 var score = 0
 var timerCountdown 
-var quizTime = 15
-console.log ("I am here");
+var quizTime = 75
 const quiz = document.getElementById("start-btn")
 const questionsDiv = document.getElementById ('questions')
 const timerEl = document.getElementById ('timer')
@@ -17,10 +16,9 @@ var questions = [
         correct: "a",
     }
 
-    
+
 ];
 function startTheQuiz() { 
-    console.log ("I am here 2");
     var startDiv = document.getElementById('quiz')
     startDiv.setAttribute('class', 'hide')
     //add class of hide then remove the class to show it 
@@ -46,27 +44,3 @@ function getTheQuestion () {
     textA.textContent = currentQuestion.a
 }
 quiz.addEventListener('click', startTheQuiz);
-
-// create button in the anser saying if they click a b c od r record which they clicked to see if they got it right, record the answer then restart thr quiz
-
-//creat div for quiz end , text content for hwo many they got right and wrong 
-//dive-opening DONE, div that shows questions, timer-> if its; eneded show the seond one. ask more than one questions. 
-
-// for each question- do the increment counter (after the answer)then call getTheQuestion
-
-//create for loop and ask question to user to get response and access the quetion prompt
-// for (var i=0; i<questions.length; i++){
-// var response = window.(questions[i].);
-// //make if statement to see if the resonse is equal to the answer to the question
-// if(response === questions[i].answer){
-//     score++;
-//     alert("correct!");
-// } else {
-//     alert("Wrong!");
-// }
-// }
-
-
-
-
-//https://www.youtube.com/watch?v=CqddbIrEM5I

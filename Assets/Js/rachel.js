@@ -1,8 +1,14 @@
-const quiz = document.getElementById("start-btn")
-function startTheQuiz() { 
-    console.log ("I am here 2");
-    var startDiv = document.getElementById('quiz')
-    startDiv.setAttribute('class', 'hide')
-}
-quiz.addEventListener('click', startTheQuiz);
+//Questions, answers, and answer choices
 
+var questions = [
+    {
+        question: "Which language makes a website interactive?",
+        choices: [ 
+        "JavaScript",
+        "Python",
+        "Java",
+        "Ruby",
+        ],
+        answer: "JavaScript",
+    }
+];
