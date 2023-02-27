@@ -15,8 +15,6 @@ var questions = [
         d: "Ruby",
         correct: "a",
     }
-
-
 ];
 function startTheQuiz() { 
     var startDiv = document.getElementById('quiz')
@@ -42,5 +40,11 @@ function getTheQuestion () {
     questionText.textContent = currentQuestion.question
     var textA = document.getElementById('answerA')
     textA.textContent = currentQuestion.a
+    var textB = document.getElementById('answerB')
+    textB.textContent = currentQuestion.b
+    var textC = document.getElementById('answerC')
+    textB.textContent = currentQuestion.c
+    var textD = document.getElementById('answerD')
+    textB.textContent = currentQuestion.d
 }
 quiz.addEventListener('click', startTheQuiz);
