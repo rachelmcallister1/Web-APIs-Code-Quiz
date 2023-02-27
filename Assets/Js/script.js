@@ -16,6 +16,8 @@ var questions = [
         d: "Ruby",
         correct: "a",
     }
+
+    
 ];
 function startTheQuiz() { 
     console.log ("I am here 2");
