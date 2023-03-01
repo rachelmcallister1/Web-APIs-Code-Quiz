@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Zeyada&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./Assets/Css/style.css" />
   <title>Timed JavaScript Quiz</title>
+  <link rel="stylesheet" href="./Assets/Css/style.css" />
 </head>
-
 <body>
-  <main>
-    <header class="quiz-header">View High Score</header>
-    <header id="timer">00</header>
-    <div class="quiz-container" id="quiz">
-      <h1>Coding Quiz Challenge</h1>
-      <h2>Try to answer the following code-related questions within the limit. Keep in mind that incorrect answers will
-        penalize your score time by 75 seconds.</h2>
-      <button id="start-btn">Start Quiz</button>
+ <div class="start-button"><button>Start</button></div>
+<div class="quiz-box">
+  <header>
+    <div class="title">Timed JavaScript Quiz</div>
+    <div class="timer">
+      <div class="timer-text">Seconds Remaining</div>
+      <div class="timer-seconds">75</div>
     </div>
-    <div class="hide" id="questions">
-      <h1 id="questionText">
-      </h1>
-      <h2 id="answerA"></h2>
-      <h2 id="answerB"></h2>
-      <h2 id="answerC"></h2>
-      <h2 id="answerD"></h2>
+  </header>
+  <section>
+    <div class="question-one">
+      <span>Which language makes a website interactive?</span>
     </div>
-  </main>
+    <div class="answer-choices">
+      <div class="choice">
+        <span>JavaScript</span> 
+        <div class="choice">
+          <span>Python</span>
+          <div class="choice">
+            <span>Java</span>
+            <div class="choice">
+              <span>Ruby</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
   <script src="./Assets/Js/script.js"></script>
 </body>
 

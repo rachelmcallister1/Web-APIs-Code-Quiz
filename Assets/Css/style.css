@@ -1,15 +1,77 @@
+/* add new google font style */
 body {
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
   font-family: 'Poppins', sans-serif;
+
+
+}
+.start-button{
+position: absolute;
+top: 50%;
+left: 50%;
 }
 
-main {
-    display: block;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  h1 {
-    
-  }
-  .hide {
-    display: none;
-  }
+.start-button button{
+  font-size: 40px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.quiz-box{
+  width: 600px;
+  background: lightblue;
+  border-radius: 10px;
+}
+
+.quiz-box header{
+height: 70px;
+padding: 0 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 600;
+}
+.timer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 150px;
+height: 50px;
+background: white;
+border: 1px solid whitesmoke;
+border-radius: 5px;
+padding: 0 8px;
+
+}
+.timer-text{
+  font-weight: 500;
+  font-size: 20px;
+}
+.timer-seconds{
+font-size: 20px;
+font-weight: 500;
+text-align: center;
+}
+
+.question-one{
+  padding: 20px;
+  display: block;
+  font-size: 30px;
+}
+.answer-choices{
+  padding: 20px;
+  display: block;
+  font-size: 30px;
+
+}
+.choice{
+  display: block;
+  background-color: white;
+  border: 1px solid grey;
+
+}
