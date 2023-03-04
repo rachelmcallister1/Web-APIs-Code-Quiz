@@ -1,5 +1,11 @@
-// Create an array that will contain objects that have our question data in them
+// Create variables for all document query selectors
+var score = document.querySelector('#points');
+var questionName = document.querySelector('#question-title');
+var answerChoices = document.querySelector('.question-choices');
+var endState = document.querySelector('.end-state');
+var questionsList = document.querySelector('.questions')
 
+//Create an array that will contain objects that have our question data in them
 var questions = [
     {
         question: 'Which language makes a website interactive',
@@ -39,15 +45,17 @@ function clockTick() {
         quizEnd();
     }
 }
-function startTheQuiz() {
+function startQuiz() {
     introEl.remove();
     //begin the timer
     timerId = setInterval(clockTick, 1000);
     //make the start time visible to user
     timerEL.textContent = time;
     //make the question populate by running getQuestion
-    getQuestion();
+    // getQuestion();
 }
+const test = document.querySelector('#question-title')
+
 function getQuestion() {
     document.querySelector('#points').textContent = points
     var questionData = questions[currentQuestionIndex];
