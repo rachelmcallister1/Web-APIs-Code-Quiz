@@ -1,3 +1,5 @@
+// Create an array that will contain objects that have our question data in them
+
 var questions = [
     {
         question: 'Which language makes a website interactive',
