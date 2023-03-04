@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timed JavaScript Quiz</title>
+  <title>Document</title>
   <link rel="stylesheet" href="./Assets/Css/style.css" />
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
- <div class="start-button"><button>Start</button></div>
-<div class="quiz-box">
-  <header>
-    <div class="title">Timed JavaScript Quiz</div>
-    <div class="timer">
-      <div class="timer-text">Seconds Remaining</div>
-      <div class="timer-seconds">75</div>
-    </div>
-  </header>
-  <section>
-    <div class="question-one">
-      <span>Which language makes a website interactive?</span>
-    </div>
-    <div class="answer-choices">
-      <div class="choice">
-        <span>JavaScript</span> 
-        <div class="choice">
-          <span>Python</span>
-          <div class="choice">
-            <span>Java</span>
-            <div class="choice">
-              <span>Ruby</span>
-        </div>
+  <div class="header">
+    <div>Points: <span id="points"></span></div>
+    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="intro">
+      <h2>Welcome to the JavaScript Quiz</h2>
+      <p>Test your JavaScript knowledge</p>
+      <button id="startQuiz">Start Quiz</button>
+      <div class="questions">
+        <h5 id="question-title"></h5>
+        <div class="question-choices"></div>
       </div>
-    </div>
-  </section>
-</div>
-
-  <script src="./Assets/Js/script.js"></script>
+      <div class="end-state hide">
+        <h5>Thank you for playing</h5>
+      </div>
+      <script src="./Assets/Js/script.js"></script>
 </body>
-
 </html>
-
-
