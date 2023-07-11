@@ -11,17 +11,17 @@ var resultsBlock = document.querySelector('#results')
 //Create an array that will contain objects that have our question data in them
 var questions = [
     {
-        question: 'Which language makes a website interactive',
+        question: 'Which language makes a website interactive?',
         choices: ['JavaScript', 'Python', 'Ruby', 'Java'],
         answer: 'JavaScript'
     },
     {
-        question: 'Which of the following are primitive data types in JavaScript',
+        question: 'Which of the following are primitive data types in JavaScript?',
         choices: ['String', 'Number', 'Boolean (true/false)', 'All of the above'],
         answer: 'All of the above'
     },
     {
-        question: 'Can a function be assigned a variable in JavaScript?',
+        question: 'True or False: A function be assigned a variable in JavaScript.',
         choices: ['True', 'False'],
         answer: 'True'
     },
