@@ -6,6 +6,7 @@ var endState = document.querySelector('.end-state');
 var questions = document.querySelector('.questions')
 var submitBtn = document.querySelector('#submit')
 var submitInitials = document.querySelector('#initials')
+var resultsBlock = document.querySelector('#results')
 
 //Create an array that will contain objects that have our question data in them
 var questions = [
@@ -96,14 +97,15 @@ function quizEnd(){
     endingScreen.classList.remove('hide')
 
     var finalScore = document.querySelector('#final-score')
-    finalScore.textContent = time;
+    finalScore.textContent = points;
 }
 
 function submitForm(event){
     event.preventDefault();
     console.log(submitInitials.value)
-    localStorage.setItem(submitInitials.value, time)
+    localStorage.setItem(submitInitials.value, points)
    // add for loop 
+   displayLocalStorageItems()
 }
 
 startQuizBtn.addEventListener('click', startQuiz)
@@ -112,3 +114,37 @@ submitBtn.addEventListener('click', submitForm)
 //Take all scores from localStorage and display them (different players) , get all items from localStorage. 
 // Loop around the items and then put them on screen. 
 // create array and set it equal to xxx 
+
+function displayLocalStorageItems() {
+    // Get an array of all the keys in localStorage
+    const keys = Object.keys(localStorage);
+
+    // Create an h1 element
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Highscores';
+    
+    // Append the h2 element to the resultsBlock element
+    resultsBlock.appendChild(h2);
+
+    // Iterate over the keys
+    for (const key of keys) {
+        // Get the value associated with the key
+        const value = localStorage.getItem(key);
+
+        // Do something with the key and value
+        console.log(`Key: ${key}, Value: ${value}`);
+
+        // Create a list item element
+        const listItem = document.createElement('div');
+
+        // Add the key and value to the list item element
+        listItem.textContent = `${key}: ${value}`;
+
+        // Append the list item element to the resultsBlock element
+        resultsBlock.appendChild(listItem);
+
+
+        resultsBlock
+    }
+}
+
