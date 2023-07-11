@@ -52,12 +52,13 @@ function startQuiz() {
     //make the start time visible to user
     timerEL.textContent = time;
     //make the question populate by running getQuestion
-    // getQuestion();
+    getQuestion();
 }
 
 function getQuestion() {
     document.querySelector('#points').textContent = points
     var questionData = questions[currentQuestionIndex];
+    console.log(questionData.question)
     document.querySelector('#question-title').textContent = questionData.question
     document.querySelector('.question-choices').innerHTML = '';
     for (var i = 0; i < questionData.choices.length; i++) {
@@ -70,11 +71,12 @@ function getQuestion() {
 }
 function userInput(e) {
     if (e.target.value === questions[currentQuestionIndex].answer) {
-        console.log('correct')
         points += 5;
+        window.alert('Correct');
         currentQuestionIndex++
+
     } else {
-        console.log('incorrect')
+        window.alert('Incorrect');
         currentQuestionIndex++
     }
     if (currentQuestionIndex === questions.length) {
@@ -85,4 +87,10 @@ function userInput(e) {
         getQuestion()
     }
 }
+
+function quizEnd(){
+    // 
+}
+
+
 startQuizBtn.addEventListener('click', startQuiz)
