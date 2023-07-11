@@ -4,6 +4,8 @@ var questionTitle = document.querySelector('#question-title')
 var questionChoices = document.querySelector('.question-choices');
 var endState = document.querySelector('.end-state');
 var questions = document.querySelector('.questions')
+var submitBtn = document.querySelector('#submit')
+var submitInitials = document.querySelector('#initials')
 
 //Create an array that will contain objects that have our question data in them
 var questions = [
@@ -80,17 +82,33 @@ function userInput(e) {
         currentQuestionIndex++
     }
     if (currentQuestionIndex === questions.length) {
-        document.querySelector('.end-state').removeAttribute('class', 'hide')
+        // document.querySelector('.end-state').classList.remove('hide')
         document.querySelector('.questions').setAttribute('class', 'hide')
         clearInterval(timerId);
+        quizEnd();
     } else {
         getQuestion()
     }
 }
 
 function quizEnd(){
-    // 
+    var endingScreen = document.querySelector('.end-state')
+    endingScreen.classList.remove('hide')
+
+    var finalScore = document.querySelector('#final-score')
+    finalScore.textContent = time;
 }
 
+function submitForm(event){
+    event.preventDefault();
+    console.log(submitInitials.value)
+    localStorage.setItem(submitInitials.value, time)
+   // add for loop 
+}
 
 startQuizBtn.addEventListener('click', startQuiz)
+submitBtn.addEventListener('click', submitForm)
+
+//Take all scores from localStorage and display them (different players) , get all items from localStorage. 
+// Loop around the items and then put them on screen. 
+// create array and set it equal to xxx 

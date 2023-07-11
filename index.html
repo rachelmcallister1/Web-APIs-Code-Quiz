@@ -18,21 +18,28 @@
     <div>Points: <span id="points"></span></div>
     <div class="timer">Time: <span id="time">0</span></div>
 
-      <div class="intro">
-        <h2>Welcome to the JavaScript Quiz</h2>
-        <p>Test your JavaScript knowledge</p>
-        <button id="startQuiz">Start Quiz</button>
-      </div>
+    <div class="intro">
+      <h2>Welcome to the JavaScript Quiz</h2>
+      <p>Test your JavaScript knowledge</p>
+      <button id="startQuiz">Start Quiz</button>
+    </div>
 
-      <div class="questions">
-        <h2 id="question-title"></h2>
-        <div class="question-choices"></div>
-        <p id="action-msg"></p>
-
-      <div class="end-state hide">
-        <h5>Thank you for playing</h5>
-      </div>
-      <script src="./Assets/Js/script.js"></script>
+    <div class="questions">
+      <h2 id="question-title"></h2>
+      <div class="question-choices"></div>
+      <p id="action-msg"></p>
+    </div>
+    
+  </div>
+  <div class="end-state hide">
+    <h5>Thank you for playing</h5>
+    <p>Your final score is <span id="final-score"></span>.</p>
+    <p>
+      Enter initials: <input type="text" id="initials" max="3" />
+      <button id="submit">Submit</button>
+    </p>
+  </div>
+  <script src="./Assets/Js/script.js"></script>
 </body>
 
 </html>
